@@ -802,6 +802,36 @@ Eres un facilitador de Scrum experimentado...
       <li><a href="https://github.com/donnemartin/system-design-primer" target="_blank">system-design-primer</a> — Aprende diseño de sistemas con AI explicándotelo.</li>
     </ul>
 
+    <h3>Skills "globales" incluidas como bonus</h3>
+    <p>Además de las skills <strong>en español</strong> hechas para este curso (carpeta <code>skills/</code>), el repo trae una carpeta <code>skills-globales/</code> con skills <strong>más generales (en inglés)</strong> que se reutilizan en cualquier proyecto. Funcionan igual: Copilot las detecta y las dispara cuando aplican.</p>
+
+    <table>
+      <thead><tr><th>Skill</th><th>Para qué sirve</th></tr></thead>
+      <tbody>
+        <tr><td><code>postmortem</code></td><td>Pre-mortem brutalmente honesto de un plan o decisión. <strong>Mi favorita para managers</strong>.</td></tr>
+        <tr><td><code>analysis-report-authoring</code></td><td>Estructura hallazgos analíticos en un reporte ejecutivo multi-audiencia.</td></tr>
+        <tr><td><code>ba-automated-analysis</code></td><td>Análisis automatizado desde un modelo de Power BI vía MCP.</td></tr>
+        <tr><td><code>data-definitions-dictionary</code></td><td>Diccionario de columnas de un dataset (SQL o DAX + CSV).</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout info">
+      <div class="callout-title">💡 Ejemplo: usa <code>postmortem</code> en una decisión real</div>
+      <div class="prompt">Usa la skill postmortem para hacer pre-mortem de esta decisión:
+"Vamos a migrar el monolito a microservicios en 6 meses con el mismo equipo de 8 ingenieros, sin contratar a nadie nuevo, manteniendo todas las features actuales sin congelar el roadmap."
+Asume que ya fall&oacute;. Dime por qu&eacute;.</div>
+    </div>
+
+    <p>Si las quieres tener disponibles en <strong>cualquier</strong> workspace (no solo este), cópialas a tu carpeta personal de skills:</p>
+    <pre><code># Windows (PowerShell)
+$dest = "$env:USERPROFILE\.copilot\skills"
+New-Item -ItemType Directory -Path $dest -Force | Out-Null
+Copy-Item -Path .\skills-globales\* -Destination $dest -Recurse -Force
+
+# macOS / Linux
+mkdir -p ~/.copilot/skills
+cp -r ./skills-globales/* ~/.copilot/skills/</code></pre>
+
     <div class="module-nav">
       <button class="btn ghost" onclick="navTo('mod4')">← Módulo 4</button>
       <button class="btn" onclick="navTo('mod6')">Módulo 6: Excel y PPT →</button>

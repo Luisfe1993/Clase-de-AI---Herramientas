@@ -48,6 +48,11 @@ Clase-de-AI---Herramientas/
 │   ├── revisar-pr/
 │   ├── metricas-dora/
 │   └── onboarding-30-60-90/
+├── skills-globales/              ← Skills extra más generales (en inglés)
+│   ├── postmortem/                  Pre-mortem brutal de un plan
+│   ├── analysis-report-authoring/   Reporte analítico multi-audiencia
+│   ├── ba-automated-analysis/       Análisis automatizado de Power BI (MCP)
+│   └── data-definitions-dictionary/ Diccionario de columnas de un dataset
 ├── agents/
 │   └── gerente-desarrollo.chatmode.md   ← Modo agente personalizado
 ├── ejemplos/
@@ -107,6 +112,19 @@ Este curso incluye 9 skills + 1 agente diseñados para problemas reales de gesti
 | Hacer code review más rápido | `revisar-pr` |
 | Onboarding de un nuevo ingeniero | `onboarding-30-60-90` |
 | Conversaciones técnicas con contexto | Agente `Gerente de Desarrollo` |
+
+### Skills globales adicionales (en inglés)
+
+En `skills-globales/` se incluyen skills más generales reutilizables fuera del curso:
+
+| Caso de uso | Skill |
+|---|---|
+| "Vamos a hacerle pre-mortem a esta decisión" (mi favorita para managers) | `postmortem` |
+| Convertir hallazgos analíticos en reporte multi-audiencia | `analysis-report-authoring` |
+| Análisis automatizado desde un modelo de Power BI vía MCP | `ba-automated-analysis` |
+| Diccionario de columnas de un dataset (SQL/DAX) | `data-definitions-dictionary` |
+
+Ver [`skills-globales/README.md`](skills-globales/README.md) para detalles y cómo activarlas a nivel global en tu máquina.
 
 ---
 

@@ -34,6 +34,17 @@ Esta carpeta incluye skills personalizadas en `skills/`. Cuando una conversació
 | Métricas DORA | `skills/metricas-dora/SKILL.md` |
 | Onboarding 30/60/90 | `skills/onboarding-30-60-90/SKILL.md` |
 
+### Skills globales adicionales (en inglés)
+
+La carpeta `skills-globales/` contiene skills más generales (no específicas al rol). **Están en inglés** pero las puedes seguir invocando aunque el resto de la conversación esté en español. Si una de estas aplica, úsala igual que las del curso:
+
+| Tema | Skill |
+|---|---|
+| Pre-mortem brutalmente honesto de un plan/decisión | `skills-globales/postmortem/SKILL.md` |
+| Estructurar hallazgos analíticos en reporte multi-audiencia | `skills-globales/analysis-report-authoring/SKILL.md` |
+| Análisis automatizado desde un modelo Power BI (vía MCP) | `skills-globales/ba-automated-analysis/SKILL.md` |
+| Diccionario de columnas de un dataset (SQL/DAX + CSV) | `skills-globales/data-definitions-dictionary/SKILL.md` |
+
 ## Estilo de respuesta
 
 - **Sé conciso**: respuestas largas solo cuando agreguen valor.
