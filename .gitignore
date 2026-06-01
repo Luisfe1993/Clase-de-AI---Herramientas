@@ -28,6 +28,8 @@ desktop.ini
 *.xlsx
 *.pptx
 !ejemplos/*.csv
+!ejemplos/*.xlsx
+!ejemplos/*.pptx
 
 # Logs
 *.log

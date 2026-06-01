@@ -1,0 +1,12 @@
+# Binarios: nunca normalizar saltos de línea
+*.pdf  binary
+*.xlsx binary
+*.xls  binary
+*.pptx binary
+*.ppt  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.zip  binary

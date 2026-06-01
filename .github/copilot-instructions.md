@@ -26,6 +26,7 @@ Esta carpeta incluye skills personalizadas en `skills/`. Cuando una conversació
 |---|---|
 | Reportes en Excel | `skills/generar-reporte-excel/SKILL.md` |
 | Presentaciones PowerPoint | `skills/generar-presentacion-pptx/SKILL.md` |
+| Analizar archivos existentes (Excel/PPTX/PDF) | `skills/analizar-archivos-existentes/SKILL.md` |
 | Planificar sprint | `skills/plan-sprint/SKILL.md` |
 | Retrospectivas | `skills/retro-equipo/SKILL.md` |
 | Preparar 1:1 | `skills/prep-one-on-one/SKILL.md` |
@@ -52,3 +53,11 @@ Cuando el usuario pida un Excel o PowerPoint:
 2. **Genera código Python** con `openpyxl` (Excel) o `python-pptx` (PowerPoint).
 3. **Explica** cómo ejecutarlo paso a paso.
 4. **Verifica** que el código produzca un archivo válido.
+
+## Análisis de archivos existentes (Excel / PPTX / PDF)
+
+Cuando el usuario adjunte o referencie un archivo `.xlsx`, `.xls`, `.pptx` o `.pdf` y quiera entenderlo, resumirlo o extraerle datos:
+1. **Sigue la skill** `analizar-archivos-existentes/SKILL.md`.
+2. **Genera un script Python** que extraiga el contenido (`openpyxl`/`pandas` para Excel, `python-pptx` para PPTX, `pypdf`/`pdfplumber` para PDF).
+3. **No te quedes en el dump crudo**: sintetiza con TL;DR, tabla de datos clave, riesgos y próximos pasos.
+4. **Propón encadenar** con `generar-reporte-excel` o `generar-presentacion-pptx` si el siguiente paso natural es un nuevo entregable.

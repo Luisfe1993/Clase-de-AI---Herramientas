@@ -23,7 +23,7 @@
       "PRE-CLASE-INSTALACION.md": "PRE-CLASE-INSTALACION.html"
     },
     "markdown.preview.breaks": true,
-    "workbench.colorTheme": "Default Light Modern",
+    "workbench.colorTheme": "Light Modern",
     "chat.promptFiles": true,
     "chat.instructionsFilesLocations": {
       ".github": true

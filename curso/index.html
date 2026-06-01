@@ -290,7 +290,8 @@
       <li><a href="#mod4" data-target="mod4"><span class="num">4</span> Modelos de AI</a></li>
       <li><a href="#mod5" data-target="mod5"><span class="num">5</span> Repos, Skills &amp; Agentes</a></li>
       <li><a href="#mod6" data-target="mod6"><span class="num">6</span> Excel y PowerPoint</a></li>
-      <li><a href="#mod7" data-target="mod7"><span class="num">7</span> Casos de uso</a></li>
+      <li><a href="#mod7" data-target="mod7"><span class="num">7</span> Analizar archivos</a></li>
+      <li><a href="#mod8" data-target="mod8"><span class="num">8</span> Casos de uso</a></li>
       <li><a href="#cierre" data-target="cierre"><span class="num">✓</span> Siguientes pasos</a></li>
     </ul>
   </nav>
@@ -320,7 +321,8 @@
       <div class="card"><span class="icon">🧠</span><h4>Modelos múltiples</h4><p>Cambia entre GPT-5, Claude, Gemini con un clic.</p></div>
       <div class="card"><span class="icon">📦</span><h4>Skills y agentes</h4><p>Personaliza Copilot a tu rol y casos de uso.</p></div>
       <div class="card"><span class="icon">📊</span><h4>Excel y PPTX</h4><p>Genera reportes con un prompt.</p></div>
-      <div class="card"><span class="icon">🚀</span><h4>Casos reales</h4><p>Sprints, retros, 1:1s, métricas DORA.</p></div>
+      <div class="card"><span class="icon">�</span><h4>Analizar archivos</h4><p>Excel, PPT y PDF que ya tienes: extáeles insights.</p></div>
+      <div class="card"><span class="icon">�🚀</span><h4>Casos reales</h4><p>Sprints, retros, 1:1s, métricas DORA.</p></div>
     </div>
 
     <div class="callout info">
@@ -882,13 +884,166 @@ Usa colores corporativos azul Microsoft.</div>
 
     <div class="module-nav">
       <button class="btn ghost" onclick="navTo('mod5')">← Módulo 5</button>
-      <button class="btn" onclick="navTo('mod7')">Módulo 7: Casos de uso →</button>
+      <button class="btn" onclick="navTo('mod7')">Módulo 7: Analizar archivos →</button>
     </div>
   </section>
 
-  <!-- MODULO 7: CASOS DE USO -->
+  <!-- MODULO 7: ANALIZAR ARCHIVOS EXISTENTES -->
   <section id="mod7" class="module">
     <span class="module-tag">Módulo 7</span>
+    <h2>Analizar archivos existentes (Excel, PowerPoint y PDF)</h2>
+    <p>Convierte cualquier archivo que te llegue en insights accionables.</p>
+
+    <h3>El escenario típico</h3>
+    <p>Como gerente recibes archivos todo el día: el Excel de presupuesto del VP, el deck del trimestre pasado, el PDF de 80 páginas del contrato con un proveedor. La pregunta no es <em>"¿qué dice?"</em> sino <em>"¿qué hago con esto?"</em>. La AI puede leerlos en segundos y darte resumen, riesgos y próximos pasos.</p>
+
+    <h3>Las librerías que vamos a usar</h3>
+    <table>
+      <thead><tr><th>Tipo de archivo</th><th>Extensión</th><th>Librería Python</th><th>Cuándo usarla</th></tr></thead>
+      <tbody>
+        <tr><td>Excel moderno</td><td><code>.xlsx</code></td><td><code>openpyxl</code> / <code>pandas</code></td><td>Lo más común. <code>pandas</code> es más cómodo para análisis tabular.</td></tr>
+        <tr><td>Excel viejo</td><td><code>.xls</code></td><td><code>xlrd==1.2.0</code> o convertir a <code>.xlsx</code></td><td>Si el archivo es de hace más de 10 años.</td></tr>
+        <tr><td>PowerPoint</td><td><code>.pptx</code></td><td><code>python-pptx</code></td><td>Extrae texto, tablas y notas del orador.</td></tr>
+        <tr><td>PDF con texto</td><td><code>.pdf</code></td><td><code>pypdf</code> o <code>pdfplumber</code></td><td><code>pdfplumber</code> es mejor cuando hay tablas.</td></tr>
+        <tr><td>PDF escaneado</td><td><code>.pdf</code></td><td><code>pytesseract</code> + <code>pdf2image</code></td><td>Requiere OCR. Más lento, pero salva PDFs que son imágenes.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Configuración inicial</h3>
+    <pre><code># Una sola vez, en la terminal de VS Code (Ctrl+`):
+pip install openpyxl pandas python-pptx pypdf pdfplumber
+
+# Solo si vas a procesar PDFs escaneados (imagen):
+pip install pytesseract pdf2image
+# Además tienes que instalar Tesseract en tu máquina:
+# Windows: https://github.com/UB-Mannheim/tesseract/wiki</code></pre>
+
+    <h3>El patrón general: extraer → analizar → actuar</h3>
+    <div class="steps">
+      <div class="step">
+        <h4>1. Extraer</h4>
+        <p>Copilot genera un script Python que abre el archivo y vuelca su contenido a texto/tablas legibles.</p>
+      </div>
+      <div class="step">
+        <h4>2. Analizar</h4>
+        <p>No te quedes en el dump crudo. Pídele a Copilot que sintetice: TL;DR de 3 líneas, tabla de datos clave, riesgos detectados, preguntas abiertas.</p>
+      </div>
+      <div class="step">
+        <h4>3. Actuar</h4>
+        <p>Encadena con otra skill: genera un Excel comparativo, un PPTX resumen, o el correo ejecutivo para tu staff.</p>
+      </div>
+    </div>
+
+    <h3>Ejemplo 1: "¿Qué dice este Excel?"</h3>
+    <p>Imagina que tu VP te mandó <code>presupuesto-q2.xlsx</code> y quieres entenderlo rápido.</p>
+    <div class="prompt">Analiza el archivo presupuesto-q2.xlsx usando la skill analizar-archivos-existentes.
+Quiero:
+1. Resumen de qué hojas tiene y qué contiene cada una.
+2. Totales clave (presupuesto total, gastado, disponible).
+3. Banderas rojas: ¿hay categorías sobregiradas? ¿fechas vencidas?
+4. Qué preguntas le devuelvo al VP.</div>
+
+    <h3>Ejemplo 2: "¿Qué dijimos el trimestre pasado?"</h3>
+    <div class="prompt">Lee el archivo review-q1.pptx, extáeme:
+- KPIs del trimestre con sus valores
+- Riesgos identificados (tabla con riesgo, impacto, mitigación)
+- Las notas del orador de cada slide
+Después, pásame un markdown con todo eso estructurado para que pueda compararlo con el Q2 actual.</div>
+
+    <h3>Ejemplo 3: "Sácame lo importante de este contrato PDF"</h3>
+    <div class="prompt">Extrae el contenido de contrato-proveedor.pdf y dame:
+- SLAs comprometidos (uptime, tiempos de respuesta)
+- Penalidades por incumplimiento
+- Fechas críticas (vencimientos, renovaciones, revisiones)
+- Cláusulas de terminación anticipada
+- Quien firma por cada parte
+Formato: tabla resumen + lista de riesgos para mi legal.</div>
+
+    <h3>Ejemplo 4: Comparar varios archivos</h3>
+    <p>Tienes 5 reportes de status semanal en PPTX y quieres ver la evolución.</p>
+    <div class="prompt">Tengo en la carpeta reports/ cinco archivos: status-semana-01.pptx hasta status-semana-05.pptx.
+Genera un script que:
+1. Lea los 5 y extraiga la tabla de riesgos de cada uno.
+2. Detecte qué riesgos se repiten y cuáles son nuevos.
+3. Construya un Excel "evolución-riesgos.xlsx" con una columna por semana y una fila por riesgo, con ✅ si estaba activo.
+Usa las skills analizar-archivos-existentes y generar-reporte-excel.</div>
+
+    <h3>Qué siempre revisar (checklist mental)</h3>
+    <table>
+      <thead><tr><th>En un Excel ejecutivo</th><th>En un deck PPTX</th><th>En un PDF de negocio</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>
+            <ul>
+              <li>¿Hay hojas ocultas?</li>
+              <li>¿Los totales cuadran?</li>
+              <li>¿Hay valores hardcoded donde deberían ser fórmulas?</li>
+              <li>¿Fechas mal parseadas?</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Portada: título, período, autor</li>
+              <li>Números grandes = KPIs</li>
+              <li>Tablas suelen tener riesgos / owners</li>
+              <li><strong>Notas del orador</strong>: oro puro</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>SLAs y penalidades</li>
+              <li>Fechas críticas</li>
+              <li>Owners / firmantes</li>
+              <li>Moneda y unidades (¿USD o MXN? ¿con IVA?)</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout warning">
+      <div class="callout-title">⚠️ Privacidad de datos</div>
+      Si el archivo trae datos personales (correos, salarios, nombres de clientes), recuerda que el modelo en la nube ve el contenido. Para casos sensibles, usa un modelo on-prem o anonimiza el archivo antes de analizarlo.
+    </div>
+
+    <div class="callout info">
+      <div class="callout-title">💡 Tip de productividad</div>
+      Si vas a analizar el mismo tipo de archivo cada semana (ej. el reporte semanal de tu equipo), pídele a Copilot que guarde el script en <code>scripts/analizar-status-semanal.py</code>. La próxima vez solo lo ejecutas con el archivo nuevo.
+    </div>
+
+    <h3>Ejercicio práctico</h3>
+    <p>El repositorio incluye 3 archivos de ejemplo en la carpeta <code>ejemplos/</code> para que practiques sin tener que buscar archivos propios:</p>
+    <ul>
+      <li><code>ejemplos/presupuesto-q2.xlsx</code> — Excel con presupuesto, hoja oculta y banderas rojas intencionales.</li>
+      <li><code>ejemplos/review-q1.pptx</code> — Deck con KPIs, riesgos y notas del orador.</li>
+      <li><code>ejemplos/contrato-proveedor.pdf</code> — Contrato con SLAs, penalidades y firmantes.</li>
+    </ul>
+    <ol>
+      <li>Abre Copilot Chat en modo <strong>Agent</strong>.</li>
+      <li>Elige uno de los 3 archivos y usa este prompt:</li>
+    </ol>
+    <div class="prompt">Analiza el archivo ejemplos/presupuesto-q2.xlsx usando la skill analizar-archivos-existentes.
+Dame TL;DR, datos clave en tabla, riesgos detectados y próximos pasos sugeridos.</div>
+    <ol start="3">
+      <li>Revisa el script generado y ejecútalo.</li>
+      <li>Si el resumen te sirve, pídele a Copilot que arme un correo ejecutivo de 5 líneas para tu jefe a partir del análisis.</li>
+      <li><strong>Bonus</strong>: encadena con otra skill — pídele que genere un Excel comparativo o un PPTX resumen del hallazgo.</li>
+    </ol>
+
+    <div class="callout success">
+      <div class="callout-title">✅ Checkpoint</div>
+      Al terminar este módulo deberías poder pasar de "recibí un archivo" a "tengo TL;DR + riesgos + próximo entregable" en menos de 5 minutos.
+    </div>
+
+    <div class="module-nav">
+      <button class="btn ghost" onclick="navTo('mod6')">← Módulo 6</button>
+      <button class="btn" onclick="navTo('mod8')">Módulo 8: Casos de uso →</button>
+    </div>
+  </section>
+
+  <!-- MODULO 8: CASOS DE USO -->
+  <section id="mod8" class="module">
+    <span class="module-tag">Módulo 8</span>
     <h2>Casos de uso para Gerentes de Desarrollo</h2>
     <p>Donde la AI realmente te devuelve horas a la semana.</p>
 
@@ -953,7 +1108,7 @@ Prepárame agenda usando la skill prep-one-on-one.</div>
     </div>
 
     <div class="module-nav">
-      <button class="btn ghost" onclick="navTo('mod6')">← Módulo 6</button>
+      <button class="btn ghost" onclick="navTo('mod7')">← Módulo 7</button>
       <button class="btn" onclick="navTo('cierre')">Cierre →</button>
     </div>
   </section>
@@ -972,6 +1127,7 @@ Prepárame agenda usando la skill prep-one-on-one.</div>
       <li>✅ Cambio de modelos de AI según la tarea.</li>
       <li>✅ Repos públicos descargados, skills y agentes personalizados.</li>
       <li>✅ Generación de Excel y PowerPoint con prompts.</li>
+      <li>✅ Análisis de archivos existentes (Excel, PPT y PDF).</li>
       <li>✅ 8 casos de uso reales para gerencia de desarrollo.</li>
     </ul>
 
@@ -1013,14 +1169,14 @@ Prepárame agenda usando la skill prep-one-on-one.</div>
     </div>
 
     <div class="module-nav">
-      <button class="btn ghost" onclick="navTo('mod7')">← Módulo 7</button>
+      <button class="btn ghost" onclick="navTo('mod8')">← Módulo 8</button>
       <button class="btn" onclick="navTo('intro')">↻ Volver al inicio</button>
     </div>
   </section>
 </main>
 
 <script>
-  const modules = ['intro','mod1','mod2','mod3','mod4','mod5','mod6','mod7','cierre'];
+  const modules = ['intro','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','cierre'];
 
   function navTo(id) {
     document.querySelectorAll('section.module').forEach(s => s.classList.remove('active'));

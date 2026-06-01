@@ -17,7 +17,8 @@ Al terminar la clase serás capaz de:
 4. **Descargar** repositorios públicos de GitHub y usarlos como base.
 5. **Crear** tus propias *skills* y *agentes* personalizados en español.
 6. **Generar** reportes en Excel y presentaciones en PowerPoint con prompts.
-7. **Aplicar** todo esto a casos reales de un gerente de desarrollo (sprints, retros, 1:1s, métricas DORA, code review, onboarding).
+7. **Analizar** archivos que ya tienes (Excel, PowerPoint y PDF) para extraer insights accionables.
+8. **Aplicar** todo esto a casos reales de un gerente de desarrollo (sprints, retros, 1:1s, métricas DORA, code review, onboarding).
 
 ---
 
@@ -40,6 +41,7 @@ Clase-de-AI---Herramientas/
 ├── skills/                       ← Skills personalizadas en español
 │   ├── generar-reporte-excel/
 │   ├── generar-presentacion-pptx/
+│   ├── analizar-archivos-existentes/
 │   ├── plan-sprint/
 │   ├── retro-equipo/
 │   ├── prep-one-on-one/
@@ -49,8 +51,12 @@ Clase-de-AI---Herramientas/
 ├── agents/
 │   └── gerente-desarrollo.chatmode.md   ← Modo agente personalizado
 ├── ejemplos/
-│   ├── metricas-equipo.csv       ← Dataset de ejemplo para Excel
-│   └── sprint-historico.md       ← Datos de ejemplo para retros
+│   ├── metricas-equipo.csv       ← Dataset CSV para Excel
+│   ├── sprint-historico.md       ← Datos para retros
+│   ├── presupuesto-q2.xlsx       ← Excel para practicar análisis
+│   ├── review-q1.pptx            ← Deck para practicar análisis
+│   ├── contrato-proveedor.pdf    ← PDF para practicar análisis
+│   └── _generar-ejemplos.py      ← Script que regenera los 3 archivos anteriores
 └── .github/
     └── copilot-instructions.md   ← Instrucciones globales para Copilot
 ```
@@ -88,7 +94,7 @@ Clase-de-AI---Herramientas/
 
 ## 🧑‍💼 Casos de uso para un gerente de desarrollo
 
-Este curso incluye 8 skills + 1 agente diseñados para problemas reales de gestión:
+Este curso incluye 9 skills + 1 agente diseñados para problemas reales de gestión:
 
 | Caso de uso | Skill que ayuda |
 |---|---|
@@ -96,6 +102,7 @@ Este curso incluye 8 skills + 1 agente diseñados para problemas reales de gesti
 | Facilitar una retrospectiva | `retro-equipo` |
 | Preparar 1:1s con tus reportes | `prep-one-on-one` |
 | Generar reporte ejecutivo mensual | `generar-reporte-excel` + `generar-presentacion-pptx` |
+| Analizar un Excel/PPT/PDF que te llegó | `analizar-archivos-existentes` |
 | Reportar DORA metrics al liderazgo | `metricas-dora` |
 | Hacer code review más rápido | `revisar-pr` |
 | Onboarding de un nuevo ingeniero | `onboarding-30-60-90` |
