@@ -1,6 +1,6 @@
-# Clase de AI — Herramientas para Gerentes de Desarrollo
+# Clase de AI — Herramientas para Gerentes de Desarrollo y Product Managers
 
-> Curso práctico en español para aprender a usar **VS Code + GitHub Copilot Chat + Modelos de AI** como herramienta diaria de un gerente de desarrollo.
+> Curso práctico en español para aprender a usar **VS Code + GitHub Copilot Chat + Modelos de AI** como herramienta diaria de un gerente de desarrollo o product manager.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Made with](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F%20%2B%20Copilot-blue)](https://github.com/features/copilot)
@@ -18,7 +18,7 @@ Al terminar la clase serás capaz de:
 5. **Crear** tus propias *skills* y *agentes* personalizados en español.
 6. **Generar** reportes en Excel y presentaciones en PowerPoint con prompts.
 7. **Analizar** archivos que ya tienes (Excel, PowerPoint y PDF) para extraer insights accionables.
-8. **Aplicar** todo esto a casos reales de un gerente de desarrollo (sprints, retros, 1:1s, métricas DORA, code review, onboarding).
+8. **Aplicar** todo esto a casos reales de gestión: sprints, retros, 1:1s, métricas DORA, code review, onboarding, incidentes productivos, status semanales, conversaciones difíciles y presentaciones a leadership.
 
 ---
 
@@ -38,7 +38,7 @@ Clase-de-AI---Herramientas/
 ├── PRE-CLASE-INSTALACION.md      ← Lee esto antes de la clase
 ├── curso/
 │   └── index.html                ← 🎓 Curso interactivo (abre en tu navegador)
-├── skills/                       ← Skills personalizadas en español
+├── skills/                       ← Skills personalizadas en español (14)
 │   ├── generar-reporte-excel/
 │   ├── generar-presentacion-pptx/
 │   ├── analizar-archivos-existentes/
@@ -47,7 +47,12 @@ Clase-de-AI---Herramientas/
 │   ├── prep-one-on-one/
 │   ├── revisar-pr/
 │   ├── metricas-dora/
-│   └── onboarding-30-60-90/
+│   ├── onboarding-30-60-90/
+│   ├── comunicado-incidente/         ← Comunicar un outage productivo
+│   ├── reporte-status-semanal/       ← Status semanal a leadership / stakeholders
+│   ├── postmortem-incidente/         ← Postmortem REAL post-incidente (NO pre-mortem)
+│   ├── conversacion-dificil/         ← Feedback, despido, decisión impopular (SBI)
+│   └── prep-presentacion-leadership/ ← QBR, headcount, roadmap, post-incident
 ├── skills-globales/              ← Skills extra más generales (en inglés)
 │   ├── postmortem/                  Pre-mortem brutal de un plan
 │   ├── analysis-report-authoring/   Reporte analítico multi-audiencia
@@ -97,9 +102,9 @@ Clase-de-AI---Herramientas/
 
 ---
 
-## 🧑‍💼 Casos de uso para un gerente de desarrollo
+## 🧑‍💼 Casos de uso para gerentes de desarrollo y product managers
 
-Este curso incluye 9 skills + 1 agente diseñados para problemas reales de gestión:
+Este curso incluye **14 skills + 1 agente** diseñados para problemas reales de gestión. Las skills aplican a ambos roles — cada `SKILL.md` distingue el matiz por audiencia cuando es relevante.
 
 | Caso de uso | Skill que ayuda |
 |---|---|
@@ -110,7 +115,12 @@ Este curso incluye 9 skills + 1 agente diseñados para problemas reales de gesti
 | Analizar un Excel/PPT/PDF que te llegó | `analizar-archivos-existentes` |
 | Reportar DORA metrics al liderazgo | `metricas-dora` |
 | Hacer code review más rápido | `revisar-pr` |
-| Onboarding de un nuevo ingeniero | `onboarding-30-60-90` |
+| Onboarding de un nuevo ingeniero / PM | `onboarding-30-60-90` |
+| Comunicar un outage productivo (status page + email + leadership) | `comunicado-incidente` |
+| Status semanal a tu jefe / stakeholders | `reporte-status-semanal` |
+| Postmortem real de un incidente (timeline, RCA, action items) | `postmortem-incidente` |
+| Preparar una conversación difícil (feedback, despido, decir "no") | `conversacion-dificil` |
+| Presentar a leadership (QBR, headcount, roadmap) | `prep-presentacion-leadership` |
 | Conversaciones técnicas con contexto | Agente `Gerente de Desarrollo` |
 
 ### Skills globales adicionales (en inglés)
@@ -134,4 +144,4 @@ MIT — libre para uso personal y comercial.
 
 ---
 
-**Hecho con ❤️ para acompañar a gerentes de desarrollo en su camino hacia la IA.**
+**Hecho con ❤️ para acompañar a gerentes de desarrollo y product managers en su camino hacia la IA.**

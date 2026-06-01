@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clase de AI · Herramientas para Gerentes de Desarrollo</title>
+<title>Clase de AI · Herramientas para Gerentes de Desarrollo y Product Managers</title>
 <style>
   :root {
     --bg: #0f172a;
@@ -280,7 +280,7 @@
 <body>
 <aside>
   <h1>🎓 Clase de AI</h1>
-  <div class="subtitle">Para gerentes de desarrollo</div>
+  <div class="subtitle">Para gerentes de desarrollo y product managers</div>
   <nav>
     <ul>
       <li><a href="#intro" data-target="intro" class="active"><span class="num">★</span> Inicio</a></li>
@@ -306,7 +306,7 @@
     <div class="hero">
       <span class="badge">Curso · 2 horas</span>
       <h2>Bienvenido al mundo de la AI aplicada</h2>
-      <p>Este curso te enseñará a usar <strong>VS Code</strong> + <strong>GitHub Copilot</strong> como tu copiloto diario para gestionar equipos de desarrollo. Nada de jerga innecesaria — solo herramientas prácticas que puedes usar mañana.</p>
+      <p>Este curso te enseñará a usar <strong>VS Code</strong> + <strong>GitHub Copilot</strong> como tu copiloto diario para <strong>gerentes de desarrollo y product managers</strong>. Nada de jerga innecesaria — solo herramientas prácticas que puedes usar mañana.</p>
       <div class="badges">
         <span class="badge">🆓 Mayormente gratis</span>
         <span class="badge">🇪🇸 100% en español</span>
@@ -1074,8 +1074,8 @@ Dame TL;DR, datos clave en tabla, riesgos detectados y próximos pasos sugeridos
   <!-- MODULO 8: CASOS DE USO -->
   <section id="mod8" class="module">
     <span class="module-tag">Módulo 8</span>
-    <h2>Casos de uso para Gerentes de Desarrollo</h2>
-    <p>Donde la AI realmente te devuelve horas a la semana.</p>
+    <h2>Casos de uso para Gerentes de Desarrollo y Product Managers</h2>
+    <p>Donde la AI realmente te devuelve horas a la semana. Las skills aplican a ambos roles — cada <code>SKILL.md</code> distingue el matiz por audiencia cuando es relevante.</p>
 
     <h3>1. Planificación de sprints</h3>
     <p><strong>Skill</strong>: <code>plan-sprint</code></p>
@@ -1126,6 +1126,29 @@ Prepárame agenda usando la skill prep-one-on-one.</div>
     <p><strong>Agente</strong>: <code>Gerente de Desarrollo</code></p>
     <p>Modo personalizado para discutir tradeoffs técnicos, RFCs, arquitectura, sin perder el lente de gestión (riesgo, time-to-market, equipo).</p>
 
+    <h3>9. Comunicar un incidente productivo en vivo</h3>
+    <p><strong>Skill</strong>: <code>comunicado-incidente</code></p>
+    <p>Durante un outage genera en paralelo: status page público, email a clientes afectados, mensaje a leadership y update al canal interno de respuesta. Cada uno con el tono y formato correcto, listo para pegar.</p>
+    <div class="prompt">Tenemos un incidente: el endpoint /pay devuelve 500 desde las 10:30am. Afecta ~30% de los usuarios de México. ETA mitigación: 30-45 min. Genera los 4 comunicados usando la skill comunicado-incidente.</div>
+
+    <h3>10. Status semanal a tu jefe / stakeholders</h3>
+    <p><strong>Skill</strong>: <code>reporte-status-semanal</code></p>
+    <p>El "viernes de status" estandarizado: TL;DR, logros, en progreso, riesgos, ayuda necesaria y próxima semana. Mismo formato cada vez — menos tiempo, más credibilidad.</p>
+
+    <h3>11. Postmortem REAL de un incidente</h3>
+    <p><strong>Skill</strong>: <code>postmortem-incidente</code></p>
+    <p>Después del incidente: timeline minuto a minuto, análisis de causa raíz con 5 Whys, action items SMART y cultura blameless. No confundir con la skill <code>postmortem</code> global, que es <em>pre-mortem</em> de planes futuros.</p>
+
+    <h3>12. Preparar una conversación difícil</h3>
+    <p><strong>Skill</strong>: <code>conversacion-dificil</code></p>
+    <p>Feedback negativo, despido, decir "no" a un stakeholder, conflicto en el equipo. Usa el framework SBI (Situation-Behavior-Impact), te da script de apertura, anticipa reacciones y prepara el post-mortem de la conversación.</p>
+    <div class="prompt">Tengo que dar feedback negativo a María. Lleva 3 sprints entregando tarde, no comunica blockers a tiempo, y en el último 1:1 se puso a la defensiva. Prepárame la conversación usando la skill conversacion-dificil.</div>
+
+    <h3>13. Presentar a leadership (QBR, headcount, roadmap)</h3>
+    <p><strong>Skill</strong>: <code>prep-presentacion-leadership</code></p>
+    <p>Memo de 1 página, 3 talking points anclados, las 10 preguntas que te van a hacer con respuestas listas, trampas políticas a manejar, y qué NO decir. Ideal para QBRs, requests de headcount, roadmap reviews y post-incidente con C-level.</p>
+    <div class="prompt">Tengo presentación el miércoles con el VP de Eng y el CFO. Voy a pedir 3 ingenieros más para Q3. Audiencia: VP Eng (mi jefe, ya alineado), CFO (escéptico de costos), Head of Product (necesita mi roadmap). Prepárame usando la skill prep-presentacion-leadership.</div>
+
     <h3>Idea bonus: hábito diario de 15 minutos</h3>
     <div class="callout info">
       <div class="callout-title">🎯 Hábito recomendado</div>
@@ -1158,7 +1181,7 @@ Prepárame agenda usando la skill prep-one-on-one.</div>
       <li>✅ Repos públicos descargados, skills y agentes personalizados.</li>
       <li>✅ Generación de Excel y PowerPoint con prompts.</li>
       <li>✅ Análisis de archivos existentes (Excel, PPT y PDF).</li>
-      <li>✅ 8 casos de uso reales para gerencia de desarrollo.</li>
+      <li>✅ 13 casos de uso reales para gerencia de desarrollo y product management.</li>
     </ul>
 
     <h3>Próximos pasos sugeridos</h3>
@@ -1195,7 +1218,7 @@ Prepárame agenda usando la skill prep-one-on-one.</div>
 
     <div class="callout success">
       <div class="callout-title">🙏 ¡Gracias!</div>
-      Si este curso te ayudó, recompártelo con otro gerente de desarrollo. La AI no reemplaza a la gente — la potencia. Sé tú la persona que potencia a su equipo.
+      Si este curso te ayudó, recompártelo con otro gerente de desarrollo o product manager. La AI no reemplaza a la gente — la potencia. Sé tú la persona que potencia a su equipo.
     </div>
 
     <div class="module-nav">
