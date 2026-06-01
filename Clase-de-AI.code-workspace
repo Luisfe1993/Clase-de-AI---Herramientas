@@ -1,0 +1,78 @@
+{
+  "folders": [
+    {
+      "name": "📚 Clase de AI · Herramientas",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/.venv": true,
+      "**/*.pyc": true
+    },
+    "files.associations": {
+      "*.chatmode.md": "markdown",
+      "SKILL.md": "markdown"
+    },
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": false,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+      "README.md": "LICENSE, .gitignore, *.code-workspace",
+      "PRE-CLASE-INSTALACION.md": "PRE-CLASE-INSTALACION.html"
+    },
+    "markdown.preview.breaks": true,
+    "workbench.colorTheme": "Default Light Modern",
+    "chat.promptFiles": true,
+    "chat.instructionsFilesLocations": {
+      ".github": true
+    },
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+    "github.copilot.chat.localeOverride": "es"
+  },
+  "extensions": {
+    "recommendations": [
+      "github.copilot",
+      "github.copilot-chat",
+      "ms-ceintl.vscode-language-pack-es",
+      "ms-python.python",
+      "yzhang.markdown-all-in-one",
+      "bierner.markdown-preview-github-styles"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "📂 Abrir curso interactivo (HTML)",
+        "type": "shell",
+        "command": "start",
+        "args": ["${workspaceFolder}/curso/index.html"],
+        "windows": { "command": "start", "args": ["", "${workspaceFolder}\\curso\\index.html"] },
+        "osx": { "command": "open", "args": ["${workspaceFolder}/curso/index.html"] },
+        "linux": { "command": "xdg-open", "args": ["${workspaceFolder}/curso/index.html"] },
+        "presentation": { "reveal": "never", "panel": "shared" },
+        "problemMatcher": []
+      },
+      {
+        "label": "📋 Abrir guía pre-clase (HTML)",
+        "type": "shell",
+        "command": "start",
+        "args": ["${workspaceFolder}/PRE-CLASE-INSTALACION.html"],
+        "windows": { "command": "start", "args": ["", "${workspaceFolder}\\PRE-CLASE-INSTALACION.html"] },
+        "osx": { "command": "open", "args": ["${workspaceFolder}/PRE-CLASE-INSTALACION.html"] },
+        "linux": { "command": "xdg-open", "args": ["${workspaceFolder}/PRE-CLASE-INSTALACION.html"] },
+        "presentation": { "reveal": "never", "panel": "shared" },
+        "problemMatcher": []
+      },
+      {
+        "label": "📦 Instalar dependencias Python (Excel + PPTX)",
+        "type": "shell",
+        "command": "pip install openpyxl python-pptx pandas",
+        "presentation": { "reveal": "always", "panel": "dedicated" },
+        "problemMatcher": []
+      }
+    ]
+  }
+}

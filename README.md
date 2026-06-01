@@ -61,7 +61,13 @@ Clase-de-AI---Herramientas/
 
 1. **Descarga este repo**: clic en el botón verde **Code** → **Download ZIP** (o usa `git clone`).
 2. **Abre el curso**: doble clic en `curso/index.html` para abrirlo en tu navegador.
-3. **Abre la carpeta en VS Code**: `Archivo → Abrir carpeta…` y selecciona la carpeta descomprimida. Las skills y el agente se cargarán automáticamente cuando uses GitHub Copilot Chat.
+3. **Abre el workspace en VS Code**: **doble clic en `Clase-de-AI.code-workspace`** (o desde VS Code: `Archivo → Abrir workspace desde archivo…`). Este workspace:
+   - Configura GitHub Copilot Chat en español
+   - Recomienda las extensiones necesarias (te aparece un popup para instalarlas)
+   - Incluye tareas rápidas: abrir el curso, abrir la guía pre-clase, instalar dependencias Python
+   - Carga automáticamente las skills, el agente y las instrucciones globales
+
+> 💡 Si prefieres abrir la carpeta directamente sin workspace, usa `Archivo → Abrir carpeta…` y selecciona esta carpeta. Funciona igual, solo sin los atajos pre-configurados.
 
 ---
 
