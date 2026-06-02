@@ -785,17 +785,19 @@ Eres un facilitador de Scrum experimentado...
       Si quieres forzar que Copilot use una skill específica, ábrela en el editor antes de preguntar o menciónala explícitamente: <em>"usando la skill <code>plan-sprint</code>, ayúdame con..."</em>
     </div>
 
-    <h3>Modo agente personalizado (<code>.chatmode.md</code>)</h3>
-    <p>VS Code te permite crear "modos de chat" personalizados. Mira el archivo:</p>
-    <pre><code>agents/gerente-desarrollo.chatmode.md</code></pre>
-    <p>Lo activas desde el chat de Copilot:</p>
+    <h3>Modos de chat personalizados (<code>.chatmode.md</code>)</h3>
+    <p>VS Code te permite crear "modos de chat" personalizados. Este repo trae dos, en la carpeta estándar <code>.github/chatmodes/</code>:</p>
+    <pre><code>.github/chatmodes/gerente-desarrollo.chatmode.md
+.github/chatmodes/product-manager.chatmode.md</code></pre>
+    <p>Los activas desde el chat de Copilot:</p>
     <ol>
       <li>Abre Copilot Chat (<code>Ctrl+Alt+I</code>).</li>
-      <li>Clic en el selector de modo (donde dice "Ask" / "Edit" / "Agent").</li>
-      <li>Elige el modo personalizado (aparece con su nombre).</li>
+      <li>Clic en el selector de modo en la parte inferior del panel (donde dice "Ask" / "Edit" / "Agent").</li>
+      <li>Elige el modo: <strong>Gerente de Desarrollo</strong> o <strong>Product Manager</strong>.</li>
+      <li>Si no aparecen, abre la paleta (<code>Ctrl+Shift+P</code>) y ejecuta <em>"Developer: Reload Window"</em>.</li>
     </ol>
 
-    <h3>Repos públicos útiles para gerentes de desarrollo</h3>
+    <h3>Repos públicos útiles para gerentes de desarrollo y product managers</h3>
     <ul>
       <li><a href="https://github.com/phuryn/pm-skills" target="_blank">phuryn/pm-skills</a> — 65 skills de Product Management (de donde nos inspiramos).</li>
       <li><a href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank">awesome-selfhosted</a> — Lista curada de herramientas open source.</li>
@@ -1122,9 +1124,14 @@ Prepárame agenda usando la skill prep-one-on-one.</div>
     <p><strong>Skill</strong>: <code>onboarding-30-60-90</code></p>
     <p>Genera un plan de 30/60/90 días personalizado al rol, seniority y stack de tu equipo.</p>
 
-    <h3>8. Conversaciones técnicas con tu equipo</h3>
-    <p><strong>Agente</strong>: <code>Gerente de Desarrollo</code></p>
-    <p>Modo personalizado para discutir tradeoffs técnicos, RFCs, arquitectura, sin perder el lente de gestión (riesgo, time-to-market, equipo).</p>
+    <h3>8. Conversaciones con lente de manager o de PM</h3>
+    <p><strong>Modos de chat</strong>: <code>Gerente de Desarrollo</code> y <code>Product Manager</code></p>
+    <p>Dos personalidades pre-configuradas que cambian cómo responde Copilot:</p>
+    <ul>
+      <li><strong>Gerente de Desarrollo</strong>: discute tradeoffs técnicos, RFCs, arquitectura, sin perder el lente de gestión (riesgo, time-to-market, equipo). Usa frameworks como DORA, SPACE, Team Topologies.</li>
+      <li><strong>Product Manager</strong>: piensa primero en problema antes que solución, prioriza con RICE/WSJF, conecta features a outcomes de negocio, ayuda con descubrimiento, PRDs, stakeholder management.</li>
+    </ul>
+    <p>Activa cualquiera desde el selector de modo en el chat de Copilot.</p>
 
     <h3>9. Comunicar un incidente productivo en vivo</h3>
     <p><strong>Skill</strong>: <code>comunicado-incidente</code></p>

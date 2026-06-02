@@ -58,8 +58,11 @@ Clase-de-AI---Herramientas/
 │   ├── analysis-report-authoring/   Reporte analítico multi-audiencia
 │   ├── ba-automated-analysis/       Análisis automatizado de Power BI (MCP)
 │   └── data-definitions-dictionary/ Diccionario de columnas de un dataset
-├── agents/
-│   └── gerente-desarrollo.chatmode.md   ← Modo agente personalizado
+├── .github/
+│   ├── copilot-instructions.md           ← Instrucciones globales para Copilot
+│   └── chatmodes/                        ← Modos de chat personalizados
+│       ├── gerente-desarrollo.chatmode.md    ← Modo para Engineering Manager
+│       └── product-manager.chatmode.md       ← Modo para Product Manager
 ├── ejemplos/
 │   ├── metricas-equipo.csv       ← Dataset CSV para Excel
 │   ├── sprint-historico.md       ← Datos para retros
@@ -67,8 +70,7 @@ Clase-de-AI---Herramientas/
 │   ├── review-q1.pptx            ← Deck para practicar análisis
 │   ├── contrato-proveedor.pdf    ← PDF para practicar análisis
 │   └── _generar-ejemplos.py      ← Script que regenera los 3 archivos anteriores
-└── .github/
-    └── copilot-instructions.md   ← Instrucciones globales para Copilot
+└── PRE-CLASE-INSTALACION.html    ← Versión interactiva de la guía pre-clase
 ```
 
 ---
@@ -121,7 +123,8 @@ Este curso incluye **14 skills + 1 agente** diseñados para problemas reales de 
 | Postmortem real de un incidente (timeline, RCA, action items) | `postmortem-incidente` |
 | Preparar una conversación difícil (feedback, despido, decir "no") | `conversacion-dificil` |
 | Presentar a leadership (QBR, headcount, roadmap) | `prep-presentacion-leadership` |
-| Conversaciones técnicas con contexto | Agente `Gerente de Desarrollo` |
+| Conversaciones técnicas con lente de manager | Modo `Gerente de Desarrollo` |
+| Conversaciones de producto con lente de PM senior | Modo `Product Manager` |
 
 ### Skills globales adicionales (en inglés)
 
