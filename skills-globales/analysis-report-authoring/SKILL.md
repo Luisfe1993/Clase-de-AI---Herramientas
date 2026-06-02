@@ -20,7 +20,6 @@ Structures statistical analysis output into a multi-audience analytical report (
 
 - You need to run the statistical analysis itself (delegate to `senior-data-analyst` agent)
 - You need to write SQL extraction queries (delegate to `tsql-query-writer` agent)
-- You are documenting columns/data definitions (use `data-definitions-dictionary` skill)
 
 ## Report Skeleton (Fixed Structure)
 
@@ -191,7 +190,6 @@ After Report.md is complete, convert to Word:
 |------|-------------|
 | Statistical analysis content (findings, tests, code) | `senior-data-analyst` agent |
 | SQL extraction queries | `tsql-query-writer` agent |
-| Column documentation | `data-definitions-dictionary` skill |
 | Pipeline orchestration | `end-to-end-analysis-pipeline` skill |
 
 ## Common Mistakes

@@ -52,8 +52,6 @@ La carpeta `skills-globales/` contiene skills más generales (no específicas al
 |---|---|
 | Pre-mortem brutalmente honesto de un plan/decisión | `skills-globales/postmortem/SKILL.md` |
 | Estructurar hallazgos analíticos en reporte multi-audiencia | `skills-globales/analysis-report-authoring/SKILL.md` |
-| Análisis automatizado desde un modelo Power BI (vía MCP) | `skills-globales/ba-automated-analysis/SKILL.md` |
-| Diccionario de columnas de un dataset (SQL/DAX + CSV) | `skills-globales/data-definitions-dictionary/SKILL.md` |
 
 ## Estilo de respuesta
 

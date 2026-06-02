@@ -55,14 +55,12 @@ Clase-de-AI---Herramientas/
 │   └── prep-presentacion-leadership/ ← QBR, headcount, roadmap, post-incident
 ├── skills-globales/              ← Skills extra más generales (en inglés)
 │   ├── postmortem/                  Pre-mortem brutal de un plan
-│   ├── analysis-report-authoring/   Reporte analítico multi-audiencia
-│   ├── ba-automated-analysis/       Análisis automatizado de Power BI (MCP)
-│   └── data-definitions-dictionary/ Diccionario de columnas de un dataset
+│   └── analysis-report-authoring/   Reporte analítico multi-audiencia
 ├── .github/
 │   ├── copilot-instructions.md           ← Instrucciones globales para Copilot
-│   └── chatmodes/                        ← Modos de chat personalizados
-│       ├── gerente-desarrollo.chatmode.md    ← Modo para Engineering Manager
-│       └── product-manager.chatmode.md       ← Modo para Product Manager
+│   └── agents/                           ← Custom agents personalizados
+│       ├── gerente-desarrollo.agent.md       ← Agente para Engineering Manager
+│       └── product-manager.agent.md          ← Agente para Product Manager
 ├── ejemplos/
 │   ├── metricas-equipo.csv       ← Dataset CSV para Excel
 │   ├── sprint-historico.md       ← Datos para retros
@@ -134,8 +132,6 @@ En `skills-globales/` se incluyen skills más generales reutilizables fuera del 
 |---|---|
 | "Vamos a hacerle pre-mortem a esta decisión" (mi favorita para managers) | `postmortem` |
 | Convertir hallazgos analíticos en reporte multi-audiencia | `analysis-report-authoring` |
-| Análisis automatizado desde un modelo de Power BI vía MCP | `ba-automated-analysis` |
-| Diccionario de columnas de un dataset (SQL/DAX) | `data-definitions-dictionary` |
 
 Ver [`skills-globales/README.md`](skills-globales/README.md) para detalles y cómo activarlas a nivel global en tu máquina.
 
